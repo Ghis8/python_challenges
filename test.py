@@ -43,6 +43,14 @@ for i in range(16):
 #a=3+5j
 #print(a.real)
 
-x=decimal.Decimal(3.14); y=decimal.Decimal(2.7)
-result=decimal.getcontext().prec=4
-print(x*y)
+# x=decimal.Decimal(3.14); y=decimal.Decimal(2.7)
+# result=decimal.getcontext().prec=4
+# print(x*y)
+numbs={"one":1,"two":2,"three":3,"four":4}
+numbs.update({"five":5,"six":6})
+sortedKeys=sorted(list(numbs),key=numbs.__getitem__)
+listComp=[value for (key,value) in sorted(numbs.items())]
+def lastOrder(string):
+		return (string[len(string)-1])
+lastOrdered=sorted(numbs.keys(),key=lastOrder)
+print(lastOrdered)
